@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dezignique | Premium Logo Design Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f6fa;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* Navigation */
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #3b82f6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png');
+      opacity: 0.1;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .site-logo {
+      height: 100px;
+      width: auto;
+      margin: 1.5rem auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .site-logo:hover {
+      transform: scale(1.03);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #1e3a8a, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      color: #4b5563;
+    }
+
+    .cta-btn {
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    }
+
+    /* About */
+    .about {
+      padding: 5rem 2rem;
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+    }
+
+    .about p {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #4b5563;
+      line-height: 1.8;
+    }
+
+    /* Portfolio */
+    .portfolio {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .portfolio h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .logos-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logos-preview img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .logos-preview img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Pricing */
+    .pricing {
+      padding: 5rem 2rem;
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .pricing h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-card h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3b82f6;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card .cta-btn {
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .testimonials h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    /* Form */
+    .form-section {
+      background: #ffffff;
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 5rem auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .form-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-section h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+
+    form button {
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    form button:hover {
+      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    footer a {
+      color: #bfdbfe;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-links {
+        gap: 1.5rem;
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 2rem;
+      }
+
+      .pricing-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 1.6rem;
+      }
+
+      .cta-btn, form button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .logos-preview {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="dezig.png" alt="Dezignique Logo" class="nav-logo" />
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home">
+    <img src="dezig.png" alt="Dezignique Logo" class="site-logo" />
+    <h1>Dezignique</h1>
+    <p>Elevate Your Brand with Premium Logo Design Solutions</p>
+  </header>
+
+  <section class="hero">
+    <h2>Craft Your Brand Identity</h2>
+    <p>Transform your vision into a stunning logo that captures your brand's essence. Our expert designers create unique, memorable logos tailored to your business needs.</p>
+    <a class="cta-btn" href="https://wa.me/919548206039" target="_blank" aria-label="Contact us on WhatsApp">Get Started Now</a>
+  </section>
+
+  <section class="about" id="about">
+    <h3>About Dezignique</h3>
+    <p>Dezignique is your trusted partner for premium logo design services. With a focus on creativity, strategy, and excellence, we craft logos that resonate with your audience and elevate your brand. Serving over 100 clients globally, our designs are built to make an impact in any industry.</p>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h3>Our Work</h3>
+    <div class="logos-preview">
+      <img src="https://via.placeholder.com/180?text=Logo+1" alt="Sample Logo 1" />
+      <img src="https://via.placeholder.com/180?text=Logo+2" alt="Sample Logo 2" />
+      <img src="https://via.placeholder.com/180?text=Logo+3" alt="Sample Logo 3" />
+      <img src="https://via.placeholder.com/180?text=Logo+4" alt="Sample Logo 4" />
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <h3>Pricing Plans</h3>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h4>Basic</h4>
+        <p class="price">$199</p>
+        <p>1 Logo Concept<br />2 Revisions<br />High-Resolution Files</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+      <div class="pricing-card">
+        <h4>Pro</h4>
+        <p class="price">$399</p>
+        <p>3 Logo Concepts<br />5 Revisions<br />Brand Guidelines</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+      <div class="pricing-card">
+        <h4>Premium</h4>
+        <p class="price">$799</p>
+        <p>5 Logo Concepts<br />Unlimited Revisions<br />Full Brand Kit</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial-grid">
+      <div<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dezignique | Premium Logo Design Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f6fa;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* Navigation */
+    nav {
+      background: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #3b82f6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png');
+      opacity: 0.1;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .site-logo {
+      height: 100px;
+      width: auto;
+      margin: 1.5rem auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .site-logo:hover {
+      transform: scale(1.03);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+      background: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #1e3a8a, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      color: #4b5563;
+    }
+
+    .cta-btn {
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .cta-btn:hover {
+      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    }
+
+    /* About */
+    .about {
+      padding: 5rem 2rem;
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
+    }
+
+    .about p {
+      max-width: 1000px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #4b5563;
+      line-height: 1.8;
+    }
+
+    /* Portfolio */
+    .portfolio {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .portfolio h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .logos-preview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logos-preview img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .logos-preview img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Pricing */
+    .pricing {
+      padding: 5rem 2rem;
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .pricing h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .pricing-card h4 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3b82f6;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card .cta-btn {
+      display: inline-block;
+      width: 100%;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 5rem 2rem;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    .testimonials h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: #f9fafb;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card p {
+      font-size: 1.1rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1e3a8a;
+    }
+
+    /* Form */
+    .form-section {
+      background: #ffffff;
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 5rem auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .form-section:hover {
+      transform: translateY(-5px);
+    }
+
+    .form-section h3 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1e3a8a;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+    }
+
+    form button {
+      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    form button:hover {
+      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    footer a {
+      color: #bfdbfe;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .nav-links {
+        gap: 1.5rem;
+      }
+
+      header h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 2rem;
+      }
+
+      .pricing-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero h2, .about h3, .portfolio h3, .pricing h3, .testimonials h3 {
+        font-size: 1.6rem;
+      }
+
+      .cta-btn, form button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      .logos-preview {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <img src="dezig.png" alt="Dezignique Logo" class="nav-logo" />
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home">
+    <img src="dezig.png" alt="Dezignique Logo" class="site-logo" />
+    <h1>Dezignique</h1>
+    <p>Elevate Your Brand with Premium Logo Design Solutions</p>
+  </header>
+
+  <section class="hero">
+    <h2>Craft Your Brand Identity</h2>
+    <p>Transform your vision into a stunning logo that captures your brand's essence. Our expert designers create unique, memorable logos tailored to your business needs.</p>
+    <a class="cta-btn" href="https://wa.me/919548206039" target="_blank" aria-label="Contact us on WhatsApp">Get Started Now</a>
+  </section>
+
+  <section class="about" id="about">
+    <h3>About Dezignique</h3>
+    <p>Dezignique is your trusted partner for premium logo design services. With a focus on creativity, strategy, and excellence, we craft logos that resonate with your audience and elevate your brand. Serving over 100 clients globally, our designs are built to make an impact in any industry.</p>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h3>Our Work</h3>
+    <div class="logos-preview">
+      <img src="https://via.placeholder.com/180?text=Logo+1" alt="Sample Logo 1" />
+      <img src="https://via.placeholder.com/180?text=Logo+2" alt="Sample Logo 2" />
+      <img src="https://via.placeholder.com/180?text=Logo+3" alt="Sample Logo 3" />
+      <img src="https://via.placeholder.com/180?text=Logo+4" alt="Sample Logo 4" />
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <h3>Pricing Plans</h3>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h4>Basic</h4>
+        <p class="price">₹499</p>
+        <p>1 Logo Concept<br />1 Revision<br />Delivery in PNG</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+      <div class="pricing-card">
+        <h4>Standard Logo</h4>
+        <p class="price">	₹999</p>
+        <p>2 Logo Concepts<br />2 Revisions<br />PNG + transparent + JPEG</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+      <div class="pricing-card">
+        <h4>Premium Logo</h4>
+        <p class="price">₹1499</p>
+        <p>3 Logo Concepts<br />5 Revisions<br />Source file (AI/PSD)<br/>All Formats</p>
+        <a class="cta-btn" href="https://wa.me/919548206039" target="_blank">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Dezignique transformed our brand with a logo that perfectly captures our vision. Professional and creative!"</p>
+        <h4>John Doe, TechStartup</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The team delivered a stunning logo in record time. Highly recommend their services!"</p>
+        <h4>Sarah Smith, Retail Co.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their attention to detail and creativity made our brand stand out. Exceptional work!"</p>
+        <h4>Mike Johnson, Creative Agency</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="contact">
+    <h3>Request Your Logo Design</h3>
+    <form action="https://formsubmit.co/dezignique@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Full Name" required aria-required="true" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" required aria-required="true" />
+
+      <label for="business">Business/Brand Name</label>
+      <input type="text" id="business" name="Business Name" required aria-required="true" />
+
+      <label for="details">Logo Requirements</label>
+      <textarea id="details" name="Logo Requirements" rows="5" required aria-required="true"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Dezignique. All Rights Reserved. | <a href="mailto:dezignique@gmail.com">dezignique@gmail.com</a> | <a href="https://wa.me/919548206039" target="_blank">+91 95482 06039</a>
+  </footer>
+</body>
+</html> class="testimonial-card">
+        <p>"Dezignique transformed our brand with a logo that perfectly captures our vision. Professional and creative!"</p>
+        <h4>John Doe, TechStartup</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The team delivered a stunning logo in record time. Highly recommend their services!"</p>
+        <h4>Sarah Smith, Retail Co.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their attention to detail and creativity made our brand stand out. Exceptional work!"</p>
+        <h4>Mike Johnson, Creative Agency</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="contact">
+    <h3>Request Your Logo Design</h3>
+    <form action="https://formsubmit.co/dezignique@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="Full Name" required aria-required="true" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="Email" required aria-required="true" />
+
+      <label for="business">Business/Brand Name</label>
+      <input type="text" id="business" name="Business Name" required aria-required="true" />
+
+      <label for="details">Logo Requirements</label>
+      <textarea id="details" name="Logo Requirements" rows="5" required aria-required="true"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Dezignique. All Rights Reserved. | <a href="mailto:dezignique@gmail.com">dezignique@gmail.com</a> | <a href="https://wa.me/919548206039" target="_blank">+91 95482 06039</a>
+  </footer>
+</body>
+</html>
