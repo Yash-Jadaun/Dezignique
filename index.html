@@ -24,12 +24,18 @@
 
     /* Navigation */
     nav {
-      background: #ffffff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      position: sticky;
+      background: #2d2d2d;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
       top: 0;
+      width: 100%;
       z-index: 1000;
-      padding: 1rem 2rem;
+      padding: 0.8rem 2rem;
+      transition: transform 0.3s ease-in-out, background 0.3s ease;
+    }
+
+    nav.hidden {
+      transform: translateY(-100%);
     }
 
     .nav-container {
@@ -41,7 +47,7 @@
     }
 
     .nav-logo {
-      height: 50px;
+      height: 40px;
       width: auto;
       transition: transform 0.3s ease;
     }
@@ -56,33 +62,55 @@
     }
 
     .nav-links a {
-      color: #1a1a1a;
+      color: #ffffff;
       text-decoration: none;
       font-weight: 500;
       font-size: 1rem;
       transition: color 0.3s ease, transform 0.3s ease;
+      position: relative;
     }
 
     .nav-links a:hover {
-      color: #3b82f6;
-      transform: translateY(-2px);
+      color: #ff6b6b;
+      transform: translateY(-1px);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #ff6b6b;
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .hamburger {
       display: none;
       font-size: 1.5rem;
       cursor: pointer;
-      color: #1a1a1a;
+      color: #ffffff;
+      transition: color 0.3s ease;
+    }
+
+    .hamburger:hover {
+      color: #ff6b6b;
     }
 
     /* Header */
     header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      background: linear-gradient(135deg, #1f2a44 0%, #4b5e7e 100%);
       color: white;
       padding: 5rem 2rem;
       text-align: center;
       position: relative;
       overflow: hidden;
+      margin-top: 60px;
     }
 
     header::before {
@@ -139,7 +167,7 @@
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      background: linear-gradient(45deg, #1e3a8a, #60a5fa);
+      background: linear-gradient(45deg, #1f2a44, #ff6b6b);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -154,7 +182,7 @@
     }
 
     .cta-btn {
-      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      background: linear-gradient(45deg, #1f2a44, #ff6b6b);
       color: white;
       padding: 1.2rem 3rem;
       border-radius: 50px;
@@ -162,13 +190,13 @@
       font-size: 1.25rem;
       font-weight: 600;
       transition: all 0.4s ease;
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 6px 20px rgba(31, 42, 68, 0.4);
     }
 
     .cta-btn:hover {
-      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      background: linear-gradient(45deg, #1a2136, #e65c5c);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+      box-shadow: 0 10px 30px rgba(31, 42, 68, 0.5);
     }
 
     /* About */
@@ -182,7 +210,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: #1e3a8a;
+      color: #1f2a44;
     }
 
     .about p {
@@ -204,7 +232,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 2.5rem;
-      color: #1e3a8a;
+      color: #1f2a44;
     }
 
     .pricing-grid {
@@ -231,7 +259,7 @@
     .pricing-card h4 {
       font-size: 2rem;
       font-weight: 600;
-      color: #1e3a8a;
+      color: #1f2a44;
       margin-bottom: 1.2rem;
     }
 
@@ -245,7 +273,7 @@
     .pricing-card .price {
       font-size: 2.5rem;
       font-weight: 700;
-      color: #3b82f6;
+      color: #ff6b6b;
       margin-bottom: 1.5rem;
     }
 
@@ -265,7 +293,7 @@
       font-size: 2.8rem;
       font-weight: 700;
       margin-bottom: 2.5rem;
-      color: #1e3a8a;
+      color: #1f2a44;
     }
 
     .testimonial-grid {
@@ -279,7 +307,7 @@
     .testimonial-card {
       background: #f9fafb;
       padding: 2.5rem;
-      border-radius: 16px;
+      border-radius: 16盒px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.4s ease;
     }
@@ -298,7 +326,7 @@
     .testimonial-card h4 {
       font-size: 1.3rem;
       font-weight: 600;
-      color: #1e3a8a;
+      color: #1f2a44;
     }
 
     /* Form */
@@ -320,7 +348,7 @@
       font-size: 2.5rem;
       font-weight: 700;
       margin-bottom: 2rem;
-      color: #1e3a8a;
+      color: #1f2a44;
       text-align: center;
     }
 
@@ -346,12 +374,12 @@
     form input:focus,
     form textarea:focus {
       outline: none;
-      border-color: #3b82f6;
-      box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+      border-color: #ff6b6b;
+      box-shadow: 0 0 12px rgba(255, 107, 107, 0.3);
     }
 
     form button {
-      background: linear-gradient(45deg, #3b82f6, #60a5fa);
+      background: linear-gradient(45deg, #1f2a44, #ff6b6b);
       color: white;
       padding: 1.2rem 3rem;
       border: none;
@@ -361,33 +389,33 @@
       font-weight: 600;
       width: 100%;
       transition: all 0.4s ease;
-      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 6px 20px rgba(31, 42, 68, 0.4);
     }
 
     form button:hover {
-      background: linear-gradient(45deg, #2563eb, #3b82f6);
+      background: linear-gradient(45deg, #1a2136, #e65c5c);
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.5);
+      box-shadow: 0 10px 30px rgba(31, 42, 68, 0.5);
     }
 
     /* Footer */
     footer {
       text-align: center;
       padding: 3rem 2rem;
-      background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+      background: linear-gradient(90deg, #1f2a44, #4b5e7e);
       color: #ffffff;
       font-size: 1.1rem;
       font-weight: 300;
     }
 
     footer a {
-      color: #bfdbfe;
+      color: #ff6b6b;
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
     footer a:hover {
-      color: #ffffff;
+      color: #ff8787;
     }
 
     /* Responsive Design */
@@ -420,11 +448,11 @@
         gap: 1.5rem;
         width: 100%;
         padding: 1rem 0;
-        background: #ffffff;
+        background: #2d2d2d;
         position: absolute;
         top: 100%;
         left: 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }
 
       .nav-links.active {
@@ -473,14 +501,17 @@
       .site-logo {
         height: 80px;
       }
+
+      .nav-logo {
+        height: 35px;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="nav-container">
-      <img src="/dezig.png" alt="Dezignique Logo" class="site-logo" />
-
+      <img src="/dezig.png" alt="Dezignique Logo" class="nav-logo" />
       <i class="bi bi-list hamburger"></i>
       <div class="nav-links">
         <a href="#home">Home</a>
@@ -557,16 +588,12 @@
       <input type="hidden" name="_captcha" value="false" />
       <label for="name">Full Name</label>
       <input type="text" id="name" name="Full Name" required aria-required="true" />
-
       <label for="email">Email Address</label>
       <input type="email" id="email" name="Email" required aria-required="true" />
-
       <label for="business">Business/Brand Name</label>
       <input type="text" id="business" name="Business Name" required aria-required="true" />
-
       <label for="details">Logo Requirements</label>
       <textarea id="details" name="Logo Requirements" rows="5" required aria-required="true"></textarea>
-
       <button type="submit">Submit Request</button>
     </form>
   </section>
@@ -578,9 +605,23 @@
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
+    const nav = document.querySelector('nav');
+    let lastScrollY = window.scrollY;
 
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        nav.classList.add('hidden');
+      } else {
+        nav.classList.remove('hidden');
+      }
+
+      lastScrollY = currentScrollY;
     });
   </script>
 </body>
